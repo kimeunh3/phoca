@@ -105,7 +105,7 @@
 -->
 
 ### 🗃 시스템 아키텍처
-<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba25ed50-07b1-4fc6-824e-34e414a67ba7%2FUntitled.png?table=block&id=8d7aa53c-28c6-4a19-8bba-bd5238e3cafa&spaceId=530d1033-cf9f-41a2-b140-62d3e90887dd&width=1440&userId=533bd621-7213-4fea-852f-906b32167253&cache=v2" width="700" height="400">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ba25ed50-07b1-4fc6-824e-34e414a67ba7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T103517Z&X-Amz-Expires=86400&X-Amz-Signature=3c2575b4231829f1b58a41e947ee89e05b769a66ffdbb9843f5f5de0312af0c4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject" width="700" height="400">
 <!-- ![image](https://user-images.githubusercontent.com/59808674/176872369-f3cee8a6-fa93-4064-a4aa-b838eccd7b4c.png)   -->
 
 ### 🛠 ER-Diagram
