@@ -5,9 +5,13 @@
 - 직접 찍은 사진의 사물을 인식하여 영단어로 변환해줍니다.
 - 만들어진 단어장의 단어들을 학습할 수 있는 컨텐츠를 제공합니다.
 
-![image](https://user-images.githubusercontent.com/59808674/176880303-1b710483-03c5-4314-b2ee-271d6a02471a.png)    
+[주요 기능 시연 영상](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03dd94dd-a4e3-446b-a4ae-de0a5684d4af/%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81_%ED%81%AC%EB%A1%AD.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T060912Z&X-Amz-Expires=86400&X-Amz-Signature=d3065954667e2a89e7f8a15e6fe6d17697a60564dfec9e7f8fa1e9dc54e16072&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25EC%258B%259C%25EC%2597%25B0%25EC%2598%2581%25EC%2583%2581%2520%25ED%2581%25AC%25EB%25A1%25AD.mp4%22&x-id=GetObject) <br>
+![image](https://user-images.githubusercontent.com/59808674/176880303-1b710483-03c5-4314-b2ee-271d6a02471a.png) 
+
 
 ## 1. 프로젝트 소개
+
+
 
 ### 💡 기획 의도
 - 언어를 배울 때 단어암기만큼 기본적인 요소는 없다.
@@ -30,12 +34,79 @@
 ## 2. 기술 스택 및 기술 문서
 
 ### 📚 기술 스택
+
+📕 **Front-end**
+    <details>
+        - 다른 설정을 할 필요 없이 SSR(ServerSideRendering)을 구현할 수 있습니다. <br>
+        - link, image, router 등 다양한 컴포넌트 및 객체를 제공하여 편리한 개발이 가능합니다. <br>
+        - react-router-dom을 사용하지 않고 편하게 page routing을 할 수 있습니다. <br>
+        - SEO(검색 엔진 최적화) 기능을 제공합니다. <br>
+    <summary>**`Next.js`**</summary></details>
+    <details>
+            - css in js로 스타일 적용 시 className으로 css가 들어가는 것이 아닌 커스텀한 컴포넌트를 사용하는 것이기 때문에 코드를 좀 더 쉽게 파악할 수 있습니다. <br>
+        - 같은 css in js인 Styled-Components와 비교하였을 때 styletron은 문자열이 아닌 객체로 들어가기 때문에 코드 작성 및 이해가 수월합니다. <br>
+        - atomic css를 기반으로 만들어졌기 때문에 css 코드 중복성을 줄여 매우 가볍습니다. <br>
+    <summary>**`styletron.js`**</summary>
+    </details>
+    <details>
+        - api 요청을 관리할 수 있습니다.<br>
+        - api 요청을 캐싱하여 요청에 대한 정보를 확인할 수 있습니다.<br>
+        - 오래된 데이터이면 쿼리 무효화를 통해 새 데이터를 가져오도록 할 수 있습니다.<br>
+        - 요청의 loading, success, error 상태를 쉽게 파악할 수 있으며 이에 따른 처리가 가능해 유저에게 현재 상태를 보여줄 수 있습니다.<br>
+        - 옵션을 통해 요청 보낼 시점을 자유롭게 정할 수 있습니다. <br>
+    <summary>**`React-Query`**</summary>
+    </details>
+    <details>
+        - action, reducer 등 복잡하게 선언할 필요없이 create 함수를 이용해 state와 state를 변경하는 action만 선언하면 되기때문에 같은 상태 관리 툴인 redux에 비해 러닝커브가 낮은 편에 속합니다. <br>
+    - redux의 제일 큰 장점인 redux-devtool을 사용할 수 있어 devtool을 통해 state를 바로 확인할 수 있습니다. <br>
+    <summary>**`Zustand`**</summary>
+    </details>
+<br>
+📘 **Back-end**
+    <details>
+        - 정렬 알고리즘이 우수하며, 동시성이 효율적으로 작동하기 때문에 데이터 무결성 측면에서 채택했습니다. <br>
+    <summary>**`PostgreSQL`**</summary>
+    </details>
+    <details>
+        - controller, service, module 로 통일성 있는 구조를 만들어 애플리케이션의 안정성을 높일 수 있으며 Typescript 기반으로 코드 재사용성에서 강점을 가집니다.<br>
+    <summary>**`NestJS`**</summary>
+    </details>
+    <details>
+        - 높은 내구성을 가지며 객체 갯수 제한없이 많은 정보를 안전하게 저장할 수 있습니다.<br>
+    <summary>**`AWS S3`**</summary>
+    </details>
+    <details>
+        - 클라우드 기반의 완전관리형 DBMS로 데이터베이스 설정과 초기 구축 시간을 줄일 수 있습니다. <br>
+    <summary>**`GCP SQL`**</summary>
+    </details>
+    <details>
+        - 독립적인 개발 환경 (컨테이너)를 제공하여 빠른 확장성을 보장하고, 반복적인 배포가 용이합니다. <br>
+    <summary>**`Docker`**</summary>
+    </details>
+**📗 AI**
+    <details>
+        -  tensorflow.js라는 선택지도 있었지만 Python-to-JavaScript 보다 Python-to-Python이 더 코드가 용이하고 가볍다는 판단을 하였습니다. <br>
+    <summary>**`Flask`**</summary>
+    </details>
+    <details>
+        - 1-Stage Detector기 때문에 위치를 찾는 문제(localization)와 분류(classification) 문제를 한번에 해결 가능합니다. <br>
+        - 위와 같은 이유로 2-Stage Detector보다 가볍고 빠릅니다. <br>
+    <summary>**`YOLO`**</summary>
+    </details>
+    <details>
+        - 고성능이 아닌 환경에서도 잘 돌아가야 하기 때문에 선택하였습니다. <br>
+    <summary>**`MobileNet`**</summary>
+    </details>
+
+<!--
 | 📕 Front-end | 📘 Back-end | 📗 AI |
 | :---: | :---: | :---: |
 |Next.js<br />Typescript<br />React Query<br />Zustand<br />Styletron<br />|Nest.js<br />Typescript<br />TypeORM<br />PostgreSQL<br />AWS S3<br />GCP<br />Docker<br />|Python<br />Jupyter<br />TensorFlow<br />yolo<br />Flask<br />|
+-->
 
 ### 🗃 시스템 아키텍처
-![image](https://user-images.githubusercontent.com/59808674/176872369-f3cee8a6-fa93-4064-a4aa-b838eccd7b4c.png)  
+![image](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba25ed50-07b1-4fc6-824e-34e414a67ba7%2FUntitled.png?table=block&id=8d7aa53c-28c6-4a19-8bba-bd5238e3cafa&spaceId=530d1033-cf9f-41a2-b140-62d3e90887dd&width=1440&userId=533bd621-7213-4fea-852f-906b32167253&cache=v2)
+<!-- ![image](https://user-images.githubusercontent.com/59808674/176872369-f3cee8a6-fa93-4064-a4aa-b838eccd7b4c.png)   -->
 
 ### 🛠 ER-Diagram
 ![image](https://user-images.githubusercontent.com/59808674/176872435-04b84c54-7552-4814-9825-e51f71d738c7.png)  
@@ -45,6 +116,9 @@
 
 ### 🖼 와이어프레임
 - [Figma](https://www.figma.com/file/L48aThyqqlQRMsaaUQqMXa/DEVMON)
+
+### ✏️ 페이지 구성
+- [페이지 구조도](https://docs.google.com/presentation/d/1QL8OPu8S15w3KxqbH98gFQPMWTYT4LKqY2QzRIV98rQ/edit?usp=sharing)
 
 ## 3. 기능
 
@@ -67,4 +141,14 @@
     - 다른 유저가 만든 단어장도 학습할 수 있게 검색하고, 북마크를 합니다.
 - 단어를 읽어주는 TTS 서비스  
     - 단어의 발음을 읽어주는 서비스 입니다.
+
+## 4. 팀 소개
+| 이름 | 역할 | 담당 부분 |
+| --- | --- | --- |
+| 김은혜 | 팀장, AI | 1. 프로젝트 진행 상황 확인 <br> 2. 사물 인식 모델 적용 <br> 3. Flask 서버 구축 <br> 4. 시스템 아키텍처 제작 |
+| 조인철 | AI | 1. 그림 퀴즈 모델 적용  <br> 2. 최종 발표 |
+| 백지유 | FE, 서기 | 1. UI/UX 디자인  <br> 2. 기술 스택 관련 세팅(next.js, react-query, zustand, styletron)  <br> 3. 페이지 구현 <br>   - 단어장 만들기  <br>  - 단어 상세 정보  <br>  - 그림 퀴즈 하러가기  <br>   - 단어 퀴즈 하러가기 <br>  - 단어장 외우기 <br>   - 로그인/회원가입 <br>4. 스크럼 회의록 작성 및 Wiki 관리  <br>5. 페이지 구성도 제작 |
+| 이창민 | FE | 1. 페이지 구현 <br>  - 메인페이지 <br>  - 마이페이지 <br>  - 학습가이드 페이지 <br>  - 단어장 네트워크 페이지 <br>  - 내 단어장/북마크한 단어장 페이지 <br>  - 단어퀴즈 |
+| 남혜민 | BE | 1. DB 설계 및 관리 <br>2. API 설계 및 구현: 유저 및 인증 API 구현 <br>3. API 문서화 <br>4. 인공지능 서버 배포 <br>5. 중간발표 |
+| 김신웅 | BE | 1. API 설계 및 구현: 단어장, 단어, 퀴즈 API 구현  <br>2. 백엔드 서버 배포 |
 
