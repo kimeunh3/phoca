@@ -105,7 +105,7 @@
 -->
 
 ### 🗃 시스템 아키텍처
-![image](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba25ed50-07b1-4fc6-824e-34e414a67ba7%2FUntitled.png?table=block&id=8d7aa53c-28c6-4a19-8bba-bd5238e3cafa&spaceId=530d1033-cf9f-41a2-b140-62d3e90887dd&width=1440&userId=533bd621-7213-4fea-852f-906b32167253&cache=v2)
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba25ed50-07b1-4fc6-824e-34e414a67ba7%2FUntitled.png?table=block&id=8d7aa53c-28c6-4a19-8bba-bd5238e3cafa&spaceId=530d1033-cf9f-41a2-b140-62d3e90887dd&width=1440&userId=533bd621-7213-4fea-852f-906b32167253&cache=v2" width="700" height="400">
 <!-- ![image](https://user-images.githubusercontent.com/59808674/176872369-f3cee8a6-fa93-4064-a4aa-b838eccd7b4c.png)   -->
 
 ### 🛠 ER-Diagram
@@ -126,19 +126,26 @@
 - [프로젝트 전체 기능 정리](https://kdt-gitlab.elice.io/ai_track/class_04/ai_project/team6/ai-project/-/wikis/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A0%84%EC%B2%B4-%EA%B8%B0%EB%8A%A5-%EC%A0%95%EB%A6%AC)
 
 ### ⚙ 메인 기능
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a8d5e303-b470-4f5a-b8bd-a6dd8b5a15ce/%EB%8B%A8%EC%96%B4%EC%9E%A5%EB%A7%8C%EB%93%A4%EA%B8%B0.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T063902Z&X-Amz-Expires=86400&X-Amz-Signature=cd77b519204d223fc51070676c9c0c4984e8139f19d51bd3dd904e71c51c261d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25EB%258B%25A8%25EC%2596%25B4%25EC%259E%25A5%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0.gif%22&x-id=GetObject"  width="700" height="380"> <br>
 - 이미지 인식 후 단어로 변환
     - 사진에 찍힌 사물들을 AI가 인식하여 영단어와 한글 뜻으로 변환해줍니다
 - 나만의 단어장 만들기
     - 이미지 인식으로 만든 단어들로 나만의 단어장을 만듭니다.
+    <br>
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/731d08e1-6636-4087-8c52-879f50f0e968/word111.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T065558Z&X-Amz-Expires=86400&X-Amz-Signature=f64f5a5f220fc7071972a350e94ed0d9f2b67d8dd3a0c4e041641baec28c68a3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22word111.gif%22&x-id=GetObject"  width="700" height="380"> </br>
 - 그림 단어 게임
     - 임의의 영단어가 주어지면 해당 단어를 AI가 맞출 수 있도록 직접 그림을 그려봅니다.
 
 ### 🔧 서브 기능
 - 단어장 학습 컨텐츠
     - 단어장 암기 페이지: 단어장의 사진과 영단어, 뜻을 암기할 수 있는 페이지가 주어집니다.
+        <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/acd67185-dd59-4cd9-9f85-c5a698c29ae0/word111.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T065833Z&X-Amz-Expires=86400&X-Amz-Signature=70a9d8ecc79352660e38f64b94afdd4c3ef17b9b8f296228ae669639110564f7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22word111.gif%22&x-id=GetObject"  width="700" height="380"> </br>
     - 카드 짝 맞추기 게임: 단어장의 사진과 영단어를 짝을 맞추며 자연스럽게 암기를 도와줍니다.
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c1e8e936-c229-4c89-a2a6-6eb971a95eeb/word111.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T065746Z&X-Amz-Expires=86400&X-Amz-Signature=121f63907d7b92d1335279f402b073d407a1ef7d3edce1cae26833e79122faee&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22word111.gif%22&x-id=GetObject"  width="700" height="380"> </br>
+
 - 다른 유저 단어장 검색 및 북마크
     - 다른 유저가 만든 단어장도 학습할 수 있게 검색하고, 북마크를 합니다.
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e924e9f9-7219-4c28-abf9-a41c14ac1ceb/word1.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220722%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220722T070020Z&X-Amz-Expires=86400&X-Amz-Signature=74fcf3ad7f36a450f0c5c82864eb6d8b57d8261c0594227b7c1d4fd13ef27ed0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22word1.gif%22&x-id=GetObject"  width="700" height="380"> </br>
 - 단어를 읽어주는 TTS 서비스  
     - 단어의 발음을 읽어주는 서비스 입니다.
 
